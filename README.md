@@ -8,6 +8,8 @@ GUI application to manage checklists saved in user profiles.
 
 User data is saved in local database.
 
+Reviewing DAO, MVC, Spring.
+
 
 
 
