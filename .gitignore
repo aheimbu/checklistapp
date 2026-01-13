@@ -1,37 +1,26 @@
-# Eclipse / IDE
-.classpath
-.project
-.settings/
-*.launch
-*.log
-
 # Maven
-target/
-pom.xml.tag
-pom.xml.releaseBackup
-pom.xml.versionsBackup
-pom.xml.next
-release.properties
-dependency-reduced-pom.xml
-buildNumber.properties
-.mvn/timing.properties
+/target/
+/pom.xml.tag
+/pom.xml.releaseBackup
+/pom.xml.versionsBackup
+/logs/
+/dependency-reduced-pom.xml
+/buildNumber.properties
 
-# OS-spezifisch
-.DS_Store
+# IntelliJ IDEA
+/.idea/
+/*.iml
+/*.iws
+/out/
+/*.ipr
+
+
+# Windows
 Thumbs.db
 
-# SQLite-Datenbank (optional, falls du die DB nicht pushen willst)
-database/checklist.db
-
-# Kompilierte Klassen
+# Java
 *.class
-
-# Logs
 *.log
-
-# Temporäre Dateien
-*.tmp
-*.bak
-
-# Maven Wrapper
-mvnw*
+*.jar
+*.war
+*.ear
