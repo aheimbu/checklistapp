@@ -13,7 +13,7 @@ public class UserDAOImpl implements UserDAO{
 
 	// if user exists in database return user
 	@Override
-	public User get(int id) throws SQLException {
+	public User getUserId(int id) throws SQLException {
 		Connection connection = DatabaseConnection.getConnection();
 		User user = null;
 		String sql = "SELECT id, name, password FROM user WHERE id = ?";
@@ -30,14 +30,14 @@ public class UserDAOImpl implements UserDAO{
 	}
 
 	@Override
-	public List<User> getAll() throws SQLException {
+	public List<User> getAllUser() throws SQLException {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	// if successful result = 1
 	@Override
-	public int insert(User user) throws SQLException {
+	public int insertUser(User user) throws SQLException {
 		Connection connection = DatabaseConnection.getConnection();
 		String sql = "INSERT INTO user (name, password) VALUES (?,?)";
 		PreparedStatement preparedStatement = connection.prepareStatement(sql);

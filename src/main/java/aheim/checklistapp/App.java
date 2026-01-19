@@ -1,9 +1,6 @@
 package aheim.checklistapp;
 
-import dao.DatabaseConnection;
-import dao.User;
-import dao.UserDAO;
-import dao.UserDAOImpl;
+import dao.*;
 import javafx.application.Application;
 import javafx.stage.Stage;
 import view.ViewLogin;
@@ -11,11 +8,13 @@ import view.ViewLogin;
 import java.sql.Connection;
 import java.sql.SQLException;
 
+import static javafx.application.Application.launch;
+
 /**
  * examples, initializations, app start
  *
  */
-public class App extends Application {
+public class App extends Application{
 
     public static void main(String[] args) throws SQLException {
         // testing database connection
@@ -26,16 +25,16 @@ public class App extends Application {
         System.out.println(user);
 
         UserDAO userdao = new UserDAOImpl();
-        User testuser = userdao.get(1);
+        User testuser = userdao.getUserId(1);
         System.out.println("User with id=1 from database: " + testuser);
+        System.out.println(userdao.insertUser(user));
 
-        System.out.println(userdao.insert(user));
-
-
-        //launch(args);
+        DAOFactory daoFactory = new DAOFactory();
+        System.out.println("Testing the Factory: "+daoFactory.getUserDAOImpl().getUserId(1));
+        launch(args);
     }
 
-    @Override
+    //@Override
     public void start(Stage stage) {
         ViewLogin loginView = new ViewLogin();
         loginView.init(stage);

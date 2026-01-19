@@ -9,10 +9,10 @@ import java.util.List;
 
 public interface DAO<T> {
 
-	T get(int id) throws SQLException;
+	T getUserId(int id) throws SQLException;
 	
-	List<T> getAll() throws SQLException;
+	List<T> getAllUser() throws SQLException;
 	
-	int insert(T t) throws SQLException;
+	int insertUser(T t) throws SQLException;
 	
 }
