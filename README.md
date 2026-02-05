@@ -1,4 +1,4 @@
-### \# Checklistapp PAUSED TILL 06.02.2026
+### \# Checklistapp PAUSED
 
 
 
